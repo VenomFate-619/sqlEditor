@@ -29,7 +29,7 @@ const TableContent = ({ data, setOpen }) => {
           <Tr>
             <Th>Field</Th>
             <Th>Data type</Th>
-            <Th>Data type</Th>
+            <Th>Is Null</Th>
           </Tr>
         </Thead>
         <Tbody>
@@ -38,7 +38,7 @@ const TableContent = ({ data, setOpen }) => {
               <Tr key={i}>
                 <Td>{x.name}</Td>
                 <Td>{x.type}</Td>
-                <Td>Null</Td>
+                <Td>{x.hasOwnProperty("value") ? "No" :"Yes"}</Td>
               </Tr>
             );
           })}
