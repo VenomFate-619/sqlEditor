@@ -6,7 +6,7 @@ import Cancel from '../svg/cancel';
 
 const TableContent = ({ data, setOpen }) => {
   return (
-    <Box p={4} pt={0} overflowY="auto"  flex={1}>
+    <Box p={4} pt={0} overflowY="auto" flex={1}>
       {/* title */}
       <Box
         display={"flex"}
@@ -29,6 +29,7 @@ const TableContent = ({ data, setOpen }) => {
           <Tr>
             <Th>Field</Th>
             <Th>Data type</Th>
+            <Th>Data type</Th>
           </Tr>
         </Thead>
         <Tbody>
@@ -37,6 +38,7 @@ const TableContent = ({ data, setOpen }) => {
               <Tr key={i}>
                 <Td>{x.name}</Td>
                 <Td>{x.type}</Td>
+                <Td>Null</Td>
               </Tr>
             );
           })}

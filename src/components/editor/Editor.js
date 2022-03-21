@@ -87,14 +87,12 @@ const Editor = () => {
 
       <AceEditor
         style={{
-          width: "500px",
           flex: 1,
-          width: "100%",
           //   maxHeight: "250px",
         }}
         height="0"
-        focus={true}
         width="100%"
+        focus={true}
         mode="mysql"
         name="editor"
         theme={theme}

@@ -1,5 +1,5 @@
 import React ,{useState} from 'react'
-import { Text, Box,  Stack ,StackDivider } from "@chakra-ui/react";
+import { Text, Box,  Stack  } from "@chakra-ui/react";
 import TableContent from '../tableContent/TableContent';
 
 let tables = [
