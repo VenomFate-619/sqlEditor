@@ -3,17 +3,14 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
 } from "@chakra-ui/react";
 
 const Result = () => {
   return (
-    <Table variant="striped" colorScheme={"gray"}>
-      <TableCaption>Imperial to metric conversion factors</TableCaption>
+    <Table variant="striped" colorScheme={"gray"} overflow="scroll">
       <Thead>
         <Tr>
           <Th>To convert</Th>
@@ -33,6 +30,26 @@ const Result = () => {
           <Td isNumeric>30.48</Td>
         </Tr>
         <Tr>
+          <Td>yards</Td>
+          <Td>metres (m)</Td>
+          <Td isNumeric>0.91444</Td>
+        </Tr>
+        <Tr>
+          <Td>yards</Td>
+          <Td>metres (m)</Td>
+          <Td isNumeric>0.91444</Td>
+        </Tr>
+        <Tr>
+          <Td>yards</Td>
+          <Td>metres (m)</Td>
+          <Td isNumeric>0.91444</Td>
+        </Tr>
+        <Tr>
+          <Td>yards</Td>
+          <Td>metres (m)</Td>
+          <Td isNumeric>0.91444</Td>
+        </Tr>
+                <Tr>
           <Td>yards</Td>
           <Td>metres (m)</Td>
           <Td isNumeric>0.91444</Td>

@@ -7,13 +7,14 @@ import "ace-builds/src-noconflict/mode-mysql";
 import "ace-builds/src-noconflict/theme-cobalt";
 import "ace-builds/src-noconflict/theme-clouds_midnight";
 import "ace-builds/src-noconflict/theme-monokai";
+import "ace-builds/src-noconflict/theme-github";
 
 // this is an optional import just improved the interaction.
 import "ace-builds/src-noconflict/ext-language_tools";
 import "ace-builds/src-noconflict/ext-beautify";
 
 let sizes = [16, 18, 20, 22];
-let themes = ["cobalt", "clouds_midnight", "monokai"];
+let themes = ["cobalt", "clouds_midnight", "github", "monokai"];
 
 const Editor = () => {
   const [code, setCode] = useState("");
@@ -28,7 +29,7 @@ const Editor = () => {
   };
 
   return (
-    <Box display="flex" flexDirection={"column"} h="100%" pb={2}>
+    <Box display="flex" flexDirection={"column"} h="100%">
       <Box
         display="flex"
         alignItems={"center"}
@@ -87,12 +88,12 @@ const Editor = () => {
       <AceEditor
         style={{
           width: "500px",
-          minHeight: "140px",
           flex: 1,
           width: "100%",
           //   maxHeight: "250px",
         }}
         height="0"
+        focus={true}
         width="100%"
         mode="mysql"
         name="editor"
@@ -103,13 +104,6 @@ const Editor = () => {
         highlightActiveLine={true}
         value={code}
       />
-      {/* <br /> */}
-      {/* <Stack pt="0.5rem" direction="row" spacing={4}>
-        <Button leftIcon={<Play />} colorScheme="whatsapp" variant="solid"  size={"xs"} >
-          Run
-        </Button>
-        <Checkbox defaultChecked>Limit to 100 Rows</Checkbox>
-      </Stack> */}
     </Box>
   );
 };

@@ -1,5 +1,5 @@
 main{
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     height: 100vh;
 }
 
@@ -37,7 +37,7 @@ main{
   flex-shrink: 1;
   flex-grow: 1;
   position: relative;
-  background: lemonchiffon
+  background-color:"#fefcfe" ;
 }
 .pane-dragging {
   overflow: hidden;
@@ -66,24 +66,10 @@ main{
   z-index: 2;
 }
 
-.horiP
+main > div > div:nth-child(1) > div > div:nth-child(3)
 {
-  /* min-width: 30%; */
+  overflow-y: auto;
+  min-height: 100px;
 }
 
 
-/* .gutter {
-  background-color: #e5e7eb;
-  background-repeat: no-repeat;
-  background-position: 50%;
-}
-
-.gutter.gutter-horizontal {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
-  cursor: col-resize;
-}
-
-.gutter.gutter-vertical {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
-  cursor: row-resize;
-} */

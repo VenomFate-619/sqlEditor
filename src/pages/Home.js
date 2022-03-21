@@ -30,7 +30,6 @@ const Home = () => {
         gutterSize={0}
         sizes={panelSize.map((p) => p.size)}
         minSize={5}
-        paneClassName="horiP"
         onSetSizes={handleSize}
       >
         <Split
@@ -42,12 +41,17 @@ const Home = () => {
           {/* editor */}
           <Editor />
           {/* result */}
-          <Box border="1px" borderColor="black" h="100%" minH={"90px"}>
-            <Result/>
+          <Box h="100%"  borderTop="1px">
+            <Result />
           </Box>
         </Split>
-        <Box height={"100%"} border="1px">
-          <TableList/>
+        <Box
+          height={"100%"}
+          borderLeft="1px"
+          borderColor={"gray.300"}
+          backgroundColor="#fefcfe"
+        >
+          <TableList />
         </Box>
       </Split>
     </main>
