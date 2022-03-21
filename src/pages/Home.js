@@ -41,7 +41,7 @@ const Home = () => {
           {/* editor */}
           <Editor />
           {/* result */}
-          <Box h="100%"  borderTop="1px">
+          <Box h="100%" borderTop="1px" borderColor={"gray.300"}>
             <Result />
           </Box>
         </Split>

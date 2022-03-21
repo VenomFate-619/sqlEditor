@@ -9,9 +9,7 @@ import "ace-builds/src-noconflict/theme-clouds_midnight";
 import "ace-builds/src-noconflict/theme-monokai";
 import "ace-builds/src-noconflict/theme-github";
 
-// this is an optional import just improved the interaction.
-import "ace-builds/src-noconflict/ext-language_tools";
-import "ace-builds/src-noconflict/ext-beautify";
+
 
 let sizes = [16, 18, 20, 22];
 let themes = ["cobalt", "clouds_midnight", "github", "monokai"];

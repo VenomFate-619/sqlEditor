@@ -10,8 +10,8 @@ import {
 
 const Result = () => {
   return (
-    <Table variant="striped" colorScheme={"gray"} overflow="scroll">
-      <Thead  position={"sticky"} top={0} backgroundColor="whiteAlpha.200" >
+    <Table variant="striped" colorScheme={"gray"} overflow="scroll"  >
+      <Thead  position={"sticky"} top={0} backgroundColor="white" >
         <Tr>
           <Th>To convert</Th>
           <Th>into</Th>
