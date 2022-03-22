@@ -6,54 +6,42 @@ import {
   Tr,
   Th,
   Td,
+  Text
 } from "@chakra-ui/react";
 
-const Result = () => {
+const attr = [
+  "id",
+  "companyName",
+  "contactName",
+  "contactTitle",
+  "address",
+  "city",
+  "region",
+  "postalCode",
+  "country",
+  "phone",
+];
+
+const Result = ({res}) => {
+  if (res.length === 0) {
+    return <Text textAlign={"center"} fontSize="4xl" >No results</Text>
+  }
   return (
-    <Table variant="striped" colorScheme={"gray"} overflow="scroll"  >
+    <Table variant="striped" colorScheme={"gray"} overflow="scroll" size="sm" >
       <Thead  position={"sticky"} top={0} backgroundColor="white" >
         <Tr>
-          <Th>To convert</Th>
-          <Th>into</Th>
-          <Th isNumeric>multiply by</Th>
+         { attr.map((x,i) => <Th key={i}  textTransform="none" >{x}</Th>) }
         </Tr>
       </Thead>
       <Tbody>
-        <Tr>
-          <Td>inches</Td>
-          <Td>millimetres (mm)</Td>
-          <Td isNumeric>25.4</Td>
+     {res.map((x,i) =>  (
+        <Tr key={i}>
+         {attr.map((y,j) => 
+           <Td  key={j} >{x[y]}</Td>
+         )}
         </Tr>
-        <Tr>
-          <Td>feet</Td>
-          <Td>centimetres (cm)</Td>
-          <Td isNumeric>30.48</Td>
-        </Tr>
-        <Tr>
-          <Td>yards</Td>
-          <Td>metres (m)</Td>
-          <Td isNumeric>0.91444</Td>
-        </Tr>
-        <Tr>
-          <Td>yards</Td>
-          <Td>metres (m)</Td>
-          <Td isNumeric>0.91444</Td>
-        </Tr>
-        <Tr>
-          <Td>yards</Td>
-          <Td>metres (m)</Td>
-          <Td isNumeric>0.91444</Td>
-        </Tr>
-        <Tr>
-          <Td>yards</Td>
-          <Td>metres (m)</Td>
-          <Td isNumeric>0.91444</Td>
-        </Tr>
-                <Tr>
-          <Td>yards</Td>
-          <Td>metres (m)</Td>
-          <Td isNumeric>0.91444</Td>
-        </Tr>
+     )  )}
+      
       </Tbody>
     </Table>
   );

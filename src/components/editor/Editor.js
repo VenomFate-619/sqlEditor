@@ -8,23 +8,30 @@ import "ace-builds/src-noconflict/theme-cobalt";
 import "ace-builds/src-noconflict/theme-clouds_midnight";
 import "ace-builds/src-noconflict/theme-monokai";
 import "ace-builds/src-noconflict/theme-github";
+import data from "../../mockdata"
 
-
-
+const query = "SELECT * FROM Customers";
 let sizes = [16, 18, 20, 22];
 let themes = ["cobalt", "clouds_midnight", "github", "monokai"];
 
-const Editor = () => {
-  const [code, setCode] = useState("");
+const Editor = ({setRes}) => {
+  const [code, setCode] = useState(query);
   const [fontSize, setFontSize] = useState(16);
   const [theme, setTheme] = useState("cobalt");
+  
 
-  const handleSize = (e) => {
-    if (e.target.value !== "") setFontSize(Number(e.target.value));
-  };
-  const handleTheme = (e) => {
-    if (e.target.value !== "") setTheme(e.target.value);
-  };
+  const handleClick = () => { 
+    console.log(code);
+    if (code.toLocaleLowerCase() === query.toLocaleLowerCase()) {
+      setRes(data.results)
+    }
+    else{
+       setRes([]);
+    }
+     
+    }
+  
+    
 
   return (
     <Box display="flex" flexDirection={"column"} h="100%">
@@ -40,7 +47,7 @@ const Editor = () => {
           </Text>
           <Select
             variant="outline"
-            onChange={handleSize}
+            onChange={(e) => setFontSize(Number(e.target.value))}
             defaultValue={16}
             size="sm"
           >
@@ -58,7 +65,7 @@ const Editor = () => {
           </Text>
           <Select
             variant="outline"
-            onChange={handleTheme}
+            onChange={(e)=>  setTheme(e.target.value) }
             defaultValue="cobalt"
             size="sm"
           >
@@ -76,6 +83,7 @@ const Editor = () => {
             variant="solid"
             // size={"md"}
             padding="0 0.5rem"
+            onClick={handleClick}
           >
             Run
           </Button>

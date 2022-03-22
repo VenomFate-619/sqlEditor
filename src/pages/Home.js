@@ -10,6 +10,7 @@ let id = 0;
 const genName = (_) => `pane${id++}`;
 
 const Home = () => {
+    const [res, setRes] = useState([]);  
     const [panelSize, setPanelSize] = useState([
       { name: genName(), size: 0.7 },
       { name: genName(), size: 0.3 },
@@ -39,10 +40,10 @@ const Home = () => {
           size={[0.7, 0.3]}
         >
           {/* editor */}
-          <Editor />
+          <Editor setRes={setRes} />
           {/* result */}
-          <Box h="100%" borderTop="1px" borderColor={"gray.300"}>
-            <Result />
+          <Box h="100%" borderTop="1px" borderColor={"gray.300"} position="absolute" left={0} right={0} textAlign="center" marginLeft={0} marginRight={0} >
+            <Result res={res} />
           </Box>
         </Split>
         <Box
@@ -50,6 +51,8 @@ const Home = () => {
           borderLeft="1px"
           borderColor={"gray.300"}
           backgroundColor="#fefcfe"
+          width={"100%"}
+          overflowX="auto"
         >
           <TableList />
         </Box>
