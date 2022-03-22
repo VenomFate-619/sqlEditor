@@ -4,3 +4,11 @@ Url:-  https://amazing-kare-53e869.netlify.app/
 
 **Report** 
 https://gtmetrix.com/reports/amazing-kare-53e869.netlify.app/6MHeigHg/
+https://yellowlab.tools/result/g85n8ylxnv
+https://tools.pingdom.com/#5feca9e659000000
+
+Before optimizing 2s
+
+Optimzed Page Load time is 1.68s
+
+For optimization I had removed uneccsary module which where included by chakra UI and file compression
