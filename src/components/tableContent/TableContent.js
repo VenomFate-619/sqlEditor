@@ -1,12 +1,12 @@
 import { Box } from '@chakra-ui/react'
 import React from 'react'
-
+import "../../pages/styles.css";
 import { Table, Thead, Tbody, Tr, Th, Td ,Text,Divider } from "@chakra-ui/react";
 import Cancel from '../svg/cancel';
 
 const TableContent = ({ data, setOpen }) => {
   return (
-    <Box p={4} pt={0} overflowY="auto" flex={1}>
+    <Box p={4} pt={0} overflowY="auto" flex={1} className="table-list">
       {/* title */}
       <Box
         display={"flex"}
@@ -38,7 +38,7 @@ const TableContent = ({ data, setOpen }) => {
               <Tr key={i}>
                 <Td>{x.name}</Td>
                 <Td>{x.type}</Td>
-                <Td>{x.hasOwnProperty("value") ? "No" :"Yes"}</Td>
+                <Td>{x.hasOwnProperty("value") ? "No" : "Yes"}</Td>
               </Tr>
             );
           })}

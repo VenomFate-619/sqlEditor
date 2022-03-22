@@ -3,6 +3,33 @@ main{
     height: 100vh;
 }
 
+/* scrollBar */
+.table-list::-webkit-scrollbar-track , 
+.pane::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.table-list::-webkit-scrollbar,.pane::-webkit-scrollbar
+{
+	width: 10px;
+  height: 8px;
+	background-color: #F5F5F5;
+}
+
+.table-list::-webkit-scrollbar-thumb,
+.pane::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgb(183,188,199);
+}
+
+
 /* example-split.css */
 .split-horizontal {
   display: flex;

@@ -101,11 +101,16 @@ const TableList = () => {
         setSelected(i);
     }
   return (
-    <Box height="100vh"  display={"flex"} flexDirection="column" >
+    <Box
+      height="100vh"
+      display={"flex"}
+      flexDirection="column"
+      
+    >
       <Text textAlign={"center"} fontSize="2xl" fontWeight={"light"}>
         Tables
       </Text>
-      <Stack p={4}  overflowY="auto" flex={1}  >
+      <Stack p={4} overflowY="auto" flex={1}>
         {tables.map((x, i) => (
           <Text
             key={i}
